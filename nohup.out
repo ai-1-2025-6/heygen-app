@@ -30,3 +30,18 @@ Port 5175 is in use, trying another one...
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
+10:17:53 AM [vite] (client) page reload tmp/index.html
+10:30:55 AM [vite] (client) page reload index.html
+10:31:02 AM [vite] (client) page reload index.html
+10:31:19 AM [vite] (client) page reload src/main.ts
+
+> heygen-app@0.0.0 dev
+> vite
+
+10:32:56 AM [vite] (client) Re-optimizing dependencies because lockfile has changed
+Port 5173 is in use, trying another one...
+
+  VITE v7.3.0  ready in 532 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
