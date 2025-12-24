@@ -1,7 +1,7 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+// src/main.ts
+import { createApp } from 'vue';
+import App from './App.vue';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
+createApp(App).mount('#root');
 

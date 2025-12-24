@@ -45,3 +45,12 @@ Port 5173 is in use, trying another one...
 
   ➜  Local:   http://localhost:5174/
   ➜  Network: use --host to expose
+
+> heygen-app@0.0.0 dev
+> vite
+
+
+  VITE v7.3.0  ready in 658 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
