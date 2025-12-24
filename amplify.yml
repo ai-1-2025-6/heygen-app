@@ -1,23 +1,27 @@
 
 version: 1
+
 frontend:
   phases:
     preBuild:
       commands:
         - npm ci --cache .npm --prefer-offline
+        # ★ デバッグ: Amplify の env に VITE_ が来ているか（値は伏せる）
+        - /usr/bin/env | grep '^VITE_' | sed 's/=.*/=<set>/' || true
+
     build:
       commands:
-        # Amplify Environment Variables → .env.production に書き出す
+        # ★ Amplify env → .env.production に書き出す（Vite が読む）
         - echo "VITE_HEYGEN_SERVER_URL=$VITE_HEYGEN_SERVER_URL" >> .env.production
         - echo "VITE_HEYGEN_API_KEY=$VITE_HEYGEN_API_KEY" >> .env.production
-        
-        # Vite build
+
+        # （Vue）型チェック → ビルド
         - npm run build
 
   artifacts:
     baseDirectory: dist
     files:
-      - "**/*"
+      - '**/*'
 
   cache:
     paths:
